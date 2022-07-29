@@ -1,0 +1,17 @@
+#score {
+  flex-direction: column;
+  gap: 3rem;
+}
+
+#score h1 {
+  font-size: 2.5rem;
+  color: #fff;
+
+  display: block;
+}
+
+@media (max-width: 991px) {
+  #score h1 {
+    font-size: 1.5rem;
+  }
+}

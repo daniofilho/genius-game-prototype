@@ -1,0 +1,8 @@
+.main-button {
+  padding: 2rem 4rem;
+  border-radius: 3px;
+  border-width: 0;
+  background-color: var(--yellow);
+  font-weight: bold;
+  color: #333;
+}

@@ -1,0 +1,36 @@
+#main-menu,
+#game,
+#score {
+  display: none;
+
+  width: 100vw;
+  height: 100vh;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.main-menu-open #main-menu {
+  display: flex;
+}
+.game-open #game {
+  display: flex;
+}
+.score-open #score {
+  display: flex;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+body {
+  background: var(--background);
+}
+
+p,
+button,
+a,
+h1,
+h2,
+h3 {
+  font-family: "Press Start 2P", cursive;
+}

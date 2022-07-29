@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta httpequiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <meta id="HandheldFriendly" content="True" />
+    <meta id="MobileOptimized" content="320" />
+    <meta
+      name="viewport"
+      content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
+    />
+    <meta
+      httpequiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="assets/images/favicon.png"
+    />
+    <title>Genius Game Prototype</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/colors.css" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+
+    <link rel="stylesheet" href="assets/css/main-menu.css" />
+    <link rel="stylesheet" href="assets/css/game.css" />
+    <link rel="stylesheet" href="assets/css/score.css" />
+
+    <link rel="stylesheet" href="assets/css/color-list.css" />
+  </head>
+
+  <body class="main-menu-open">
+    <section id="main-menu">
+      <button
+        type="button"
+        onclick="javascript:gameHandler.startNewGame()"
+        class="main-button"
+      >
+        Começar a jogar
+      </button>
+    </section>
+    <!-- .#main-menu -->
+
+    <section id="game">
+      <div id="color-list"></div>
+    </section>
+    <!-- .#game -->
+
+    <section id="score">
+      <h1>Pontuação: <span id="score-points"></span></h1>
+
+      <button
+        type="button"
+        onclick="javascript:gameHandler.startNewGame()"
+        class="main-button"
+      >
+        Jogar novamente
+      </button>
+    </section>
+    <!-- .#score -->
+
+    <script src="assets/scripts/data.js" type="text/javascript"></script>
+    <script src="assets/scripts/game.js" type="text/javascript"></script>
+  </body>
+</html>

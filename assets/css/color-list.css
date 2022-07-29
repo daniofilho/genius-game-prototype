@@ -1,0 +1,104 @@
+:root {
+  --animation-duration: 0.5s;
+}
+
+/* * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+#color-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+
+  width: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
+  height: 100%;
+
+  padding: 1rem;
+
+  overflow: hidden;
+}
+
+/* * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+#color-list .color {
+  padding: 0.5rem;
+}
+
+@media (max-width: 991px) {
+  #color-list .color {
+    padding: 0rem;
+  }
+}
+
+/* * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+#color-list .color button {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  border-width: 0;
+  background-image: var(--image);
+  background-color: var(--color);
+  background-size: 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  box-shadow: 0px 0px 0px 0px var(--color);
+
+  transition: var(--animation-duration);
+}
+
+#color-list .color.glowing button {
+  box-shadow: 0px 0px 20px 10px var(--color) !important;
+}
+
+/* * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+@keyframes correct {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#color-list .color.correct button {
+  animation: correct var(--animation-duration) 1 forwards;
+}
+
+/* * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+@keyframes wrong {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  20% {
+    transform: scale(0.9) rotate(-2deg);
+  }
+  40% {
+    transform: scale(0.9) rotate(2deg);
+  }
+  60% {
+    transform: scale(0.9) rotate(-2deg);
+  }
+  80% {
+    transform: scale(0.9) rotate(2deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+#color-list .color.wrong button {
+  animation: wrong var(--animation-duration) 1 forwards;
+}
